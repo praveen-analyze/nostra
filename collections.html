@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Collections</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="collections.css">
+</head>
+
+<body>
+
+<!-- Add News -->
+<section id="addCard" class="flex justify-center items-center md:text-xl text-gray-300 p-2" style="background-color:#1D232C;">
+<p>Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order</p>
+
+<svg id="closeAdd" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 cursor-pointer ml-20">
+<path stroke="currentColor" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+</svg>
+</section>
+
+<!-- Navbar -->
+<section class="flex justify-between items-center p-3 md:p-5 sticky top-0 bg-white z-20 shadow">
+
+<h1 class="text-3xl font-bold">Nostra</h1>
+
+<ul class="hidden md:flex gap-10 text-xl">
+<li class="hover:underline"><a href="index.html">Home</a></li>
+<li class="hover:underline"><a href="new-arrival">New Arrival</a></li>
+<li class="hover:underline"><a href="#most-wanted">Most Wanted</a></li>
+<li class="hover:underline"><a href="collections.html">Collections</a></li>
+<li class="hover:underline"><a href="contact.html">Contact Us</a></li>
+</ul>
+
+<svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:hidden">
+<path stroke="currentColor" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+</svg>
+
+</section>
+
+<!-- Side Navbar -->
+<section class="fixed top-0 left-0 z-30 transition-all duration-1000 " id="sideNav" style="background-color: #1D232C;height: 100vh; width: 50%; color: #E5E5E5;left: -50%;">
+    <div>
+               <svg xmlns="http://www.w3.org/2000/svg" id="closeNav" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 cursor-pointer font-bold absolute top-1 right-3" >
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+        <ul class="flex flex-col gap-10 text-xl p-5 font-bold ">
+            <li class=" w-full text-center px-2 py-3  hover:bg-gray-400 transition-all duration-1000" >
+                <a href="index.html">Home</a>
+            </li>
+             <li class=" w-full text-center  px-2 py-3 hover:bg-gray-400 transition-all duration-1000">
+                <a href="#new-arrival">New Arrival</a>
+            </li>
+              <li class=" w-full text-center  px-2 py-3 hover:bg-gray-400 transition-all duration-1000">
+                <a href="#most-wanted">Most Wanted</a>
+            </li>
+             <li class=" w-full text-center  px-2 py-3 hover:bg-gray-400 transition-all duration-1000">
+                <a href="collections.html">Collections</a>
+            </li>
+             <li class=" w-full text-center  px-2 py-3 hover:bg-gray-400 transition-all duration-1000">
+                <a href="contact.html">Contact Us</a>
+            </li>
+
+        </ul>
+    </div>
+
+</section>
+
+<!-- MAIN GRID -->
+<section class="grid grid-cols-4 gap-5 p-5">
+
+<!-- FILTER COLUMN -->
+<div class="col-span-1  border-r-2 border-black pr-6">
+
+<h1 class="font-bold text-xl mt-5">Occasion</h1>
+
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2">
+<input type="checkbox" class="occasion-checkbox" value="summer"> Summer
+</label>
+
+<label class="flex items-center gap-2">
+<input type="checkbox" class="occasion-checkbox" value="party"> Party
+</label>
+
+<label class="flex items-center gap-2">
+<input type="checkbox" class="occasion-checkbox" value="beach"> Beach
+</label>
+</div>
+
+<h1 class="font-bold text-xl mt-5">Colors</h1>
+
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2">
+<input type="checkbox" class="color-checkbox" value="red"> Red
+</label>
+
+<label class="flex items-center gap-2">
+<input type="checkbox" class="color-checkbox" value="green"> Green
+</label>
+
+<label class="flex items-center gap-2">
+<input type="checkbox" class="color-checkbox" value="white"> White
+</label>
+
+<label class="flex items-center gap-2">
+<input type="checkbox" class="color-checkbox" value="blue"> Blue
+</label>
+</div>
+
+<h1 class="font-bold text-xl mt-5">Arrivals</h1>
+
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2">
+<input type="checkbox" class="arrival-checkbox" value="old"> Old
+</label>
+
+<label class="flex items-center gap-2">
+<input type="checkbox" class="arrival-checkbox" value="new"> New
+</label>
+</div>
+
+
+</div>
+
+
+<!-- products-->
+<div class="col-span-3">
+
+<!-- SEARCH -->
+<div class="relative">
+    
+<input id="search"
+class="border border-black outline-none rounded p-2 w-full"
+placeholder="Search">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+class="w-4 h-4 md:w-5 md:h-5 absolute right-3 top-1/4 -translate-y-1/2 text-gray-500"
+fill="none"
+viewBox="0 0 24 24">
+
+<path stroke="currentColor" stroke-width="2"
+d="m21 21-5-5M10 18a8 8 0 100-16 8 8 0 000 16z"/>
+
+</svg>
+
+</div>
+<!-- PRODUCTS -->
+<div id="container" class="grid grid-cols-3 gap-5 mt-5">
+
+<div class="product" data-occasion="summer" data-color="red" data-arrival="new">
+<img src="./Images/f2.jpg">
+<h1 class="font-bold">Floral Summer Shirt</h1>
+<p>$220</p>
+</div>
+
+<div class="product" data-occasion="summer" data-color="green" data-arrival="new">
+<img src="./Images/n7.jpg">
+<h1 class="font-bold">Summer Green</h1>
+<p>$260</p>
+</div>
+
+<div class="product" data-occasion="party" data-color="white" data-arrival="old">
+<img src="./Images/n2.jpg">
+<h1 class="font-bold">Party Floral Shirt</h1>
+<p>$399</p>
+</div>
+
+<div class="product" data-occasion="beach" data-color="white" data-arrival="new">
+<img src="./Images/f5.jpg">
+<h1 class="font-bold">Beach Shirt</h1>
+<p>$259</p>
+</div>
+
+<div class="product" data-occasion="party" data-color="red" data-arrival="new">
+<img src="./Images/f6.jpg">
+<h1 class="font-bold">Party Red</h1>
+<p>$299</p>
+</div>
+
+<div class="product" data-occasion="summer" data-color="blue" data-arrival="old">
+<img src="./Images/f4.jpg">
+<h1 class="font-bold">Summer Blue</h1>
+<p>$269</p>
+</div>
+<div class="product" data-occasion="summer" data-color="green" data-arrival="new">
+<img src="./Images/f1.jpg">
+<h1 class="font-bold">Summer Green</h1>
+<p>$260</p>
+
+</div>
+<div class="product" data-occasion="party" data-color="white" data-arrival="old">
+<img src="./Images/n1.jpg">
+<h1 class="font-bold">Party Floral Shirt</h1>
+<p>$399</p>
+</div>
+<div class="product" data-occasion="beach" data-color="white" data-arrival="new">
+<img src="./Images/f3.jpg">
+<h1 class="font-bold">Beach Shirt</h1>
+<p>$259</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
+<script src="collection.js"></script>
