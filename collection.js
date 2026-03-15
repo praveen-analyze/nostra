@@ -74,4 +74,17 @@ search.addEventListener("keyup",filterProducts)
 
 document.querySelectorAll("input[type='checkbox']")
 .forEach(box=>box.addEventListener("change",filterProducts))
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", function () {
+  reveals.forEach((element) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      element.classList.remove("opacity-0");
+      element.classList.remove("translate-y-10");
+    }
+  });
+});
 
